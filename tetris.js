@@ -43,10 +43,28 @@ class Tetris {
                     [1,1,1,1],
                     [0,0,0,0],
                     [0,0,0,0]
+                ],
+                [
+                    [0,0,1,0],
+                    [0,0,1,0],
+                    [0,0,1,0],
+                    [0,0,1,0]
                 ]
             ],
             // O-piece
             [
+                [
+                    [2,2],
+                    [2,2]
+                ],
+                [
+                    [2,2],
+                    [2,2]
+                ],
+                [
+                    [2,2],
+                    [2,2]
+                ],
                 [
                     [2,2],
                     [2,2]
@@ -150,7 +168,21 @@ class Tetris {
         ];
     }
     
+    validatePieces() {
+        this.pieces.forEach((piece, index) => {
+            if (piece.length === 0) {
+                console.warn(`Piece ${index} has no rotations`);
+            }
+            piece.forEach((rotation, rotIndex) => {
+                if (!rotation || rotation.length === 0) {
+                    console.warn(`Piece ${index} rotation ${rotIndex} is empty`);
+                }
+            });
+        });
+    }
+    
     init() {
+        this.validatePieces();
         this.spawnPiece();
         this.updateDisplay();
         this.bindEvents();
