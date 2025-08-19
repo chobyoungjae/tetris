@@ -7,37 +7,13 @@
 }
 
 body {
-    font-family: 'Noto Sans KR', 'Fredoka One', sans-serif;
-    background: linear-gradient(45deg, 
-        #ff9a9e 0%, 
-        #fecfef 15%, 
-        #fecfef 25%, 
-        #a8edea 35%, 
-        #fed6e3 45%, 
-        #d299c2 55%, 
-        #fef9d7 65%, 
-        #d299c2 75%, 
-        #89f7fe 85%, 
-        #66a6ff 100%);
-    background-size: 400% 400%;
-    animation: rainbow 8s ease infinite;
-    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #e8f4fd 0%, #d1e7fa 50%, #bcddf7 100%);
+    color: #333;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@keyframes rainbow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .container {
@@ -54,32 +30,22 @@ body {
 }
 
 .game-info h1 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 3em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 2.8em;
     text-align: center;
     margin-bottom: 30px;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: textRainbow 3s ease infinite;
-    text-shadow: 0 0 30px rgba(255,255,255,0.5);
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-}
-
-@keyframes textRainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    letter-spacing: 2px;
 }
 
 .score-info {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.7);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.8);
 }
 
 .score-info div {
@@ -94,12 +60,13 @@ body {
 }
 
 .next-piece {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.7);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     backdrop-filter: blur(10px);
     text-align: center;
+    border: 1px solid rgba(255,255,255,0.8);
 }
 
 .next-piece h3 {
@@ -114,10 +81,11 @@ body {
 }
 
 .controls {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.7);
     padding: 20px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.8);
 }
 
 .controls h3 {
@@ -141,10 +109,10 @@ body {
 }
 
 #game-canvas {
-    border: 3px solid rgba(255,255,255,0.8);
+    border: 3px solid rgba(255,255,255,0.9);
     border-radius: 10px;
-    background: rgba(0,0,0,0.8);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .game-over-screen {
@@ -174,29 +142,21 @@ body {
 #restart-btn {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
-    background: linear-gradient(45deg, #ff9a9e, #fecfef, #a8edea, #fed6e3);
-    background-size: 300% 300%;
-    animation: buttonRainbow 2s ease infinite;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 #restart-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
-
-@keyframes buttonRainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
 .hidden {
